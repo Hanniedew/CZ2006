@@ -14,7 +14,7 @@ function AddComment(props) {
     const onChange = (event) => {
         setText(event.target.value)
     }
-    const isTextAreaDisabled = !user ? true : !user.emaiLVerified ? true : text.length === 0 ? true : false
+    const isTextAreaDisabled = !user ? true : !user.emailVerified ? true : text.length === 0 ? true : false
 
 
     return (
@@ -49,7 +49,7 @@ function AddComment(props) {
             {!user && <p className='comment-warning'>
                 Please Login to Comment.
             </p>}
-            {user && !user.emaiLVerified && <p className='comment-warning'>
+            {(user && !user.emailVerified) && <p className='comment-warning'>
                 Please Verify your Email to Comment.
             </p>}
 
