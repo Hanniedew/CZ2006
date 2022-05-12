@@ -9,10 +9,11 @@ import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 import { SchoolsContext } from "../Contexts/SchoolsContext";
 import React, { useContext } from "react";
+import data from "../JSON/combined_data.json"; // COMBINED DATASET OF EVERYTHING WE NEED
 
 const MoreInformation = () => {
   const { schoolsContext } = useContext(SchoolsContext);
-  const data = schoolsContext.schools;
+  //const data = schoolsContext.schools;
   const { school_name } = useParams();
 
   return (
@@ -261,7 +262,7 @@ const MoreInfo = ({
 
         <div className="website">
           <b>
-            <a href={url_address} target="_blank" >
+            <a href={url_address} target="_blank">
               Visit the School Page{" "}
             </a>
           </b>

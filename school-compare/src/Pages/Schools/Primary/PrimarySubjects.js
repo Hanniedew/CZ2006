@@ -5,7 +5,7 @@ import Dropdown from "../../../Components/Dropdown";
 //import CompareButton from "../../../Components/CompareButton";
 import SideDrawer from "../../../Components/SideDrawer";
 import SubjectsCard from "../../../Components/SubjectsCard";
-//import data from "../../../JSON/combined_data.json"; // COMBINED DATASET OF EVERYTHING WE NEED
+import data from "../../../JSON/combined_data.json"; // COMBINED DATASET OF EVERYTHING WE NEED
 
 import "../../../ComponentsCSS/PaginationButtons.css";
 import "../../../ComponentsCSS/SchoolsCard.css";
@@ -21,7 +21,7 @@ function PrimarySubjects() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const { schoolsContext } = useContext(SchoolsContext);
-  let data = schoolsContext.schools;
+  //let data = schoolsContext.schools;
 
   // initialize schools
   let schools = [];
